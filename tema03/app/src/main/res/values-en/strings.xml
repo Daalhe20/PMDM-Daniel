@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ActividadTema03</string>
+    <string name="btnContinuar">Continue</string>
+    <string name="btnCancelar">Cancel</string>
+</resources>
