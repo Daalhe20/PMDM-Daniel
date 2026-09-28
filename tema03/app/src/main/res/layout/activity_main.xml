@@ -26,7 +26,8 @@
         tools:layout_editor_absoluteX="57dp"
         tools:layout_editor_absoluteY="408dp"
         app:backgroundTint="@color/verdeContinuar"
-        />
+        style="@style/botonGeneral"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/button2"
@@ -36,6 +37,7 @@
         tools:layout_editor_absoluteX="227dp"
         tools:layout_editor_absoluteY="408dp"
         app:backgroundTint="@color/rojoCancelar"
-        />
+        style="@style/botonGeneral"
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
