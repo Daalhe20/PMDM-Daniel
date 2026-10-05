@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Ejercicio1 -->
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="red">#FFFF0000</color>
     <color name="green">#FF00FF00</color>
     <color name="blue">#FF87CEEB</color>
+    <!-- Ejercicio2 -->
     <color name="yellow">#E2D112</color>
+
     <color name="purple">#9613E7</color>
     <color name="orange">#BC4E06</color>
     <color name="brown">#FFA52A2A</color>
