@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Ejercicio1 -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="red">#FFFF0000</color>
+    <color name="green">#FF00FF00</color>
+    <color name="blue">#FF87CEEB</color>
+    <!-- Ejercicio2 -->
+    <color name="yellow">#E2D112</color>
+    <!-- Ejercicio2 -->
+    <color name="pantalla">#8BC34A</color>
+    <color name="fondo">#74777E</color>
+    <color name="btn">#090908</color>
+    <color name="btnOperacion">#FF5722</color>
+    <color name="letraBtn">#FAF6FA</color>
+</resources>
