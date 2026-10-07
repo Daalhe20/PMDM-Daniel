@@ -8,9 +8,10 @@
     <color name="blue">#FF87CEEB</color>
     <!-- Ejercicio2 -->
     <color name="yellow">#E2D112</color>
-
-    <color name="purple">#9613E7</color>
-    <color name="orange">#BC4E06</color>
-    <color name="brown">#FFA52A2A</color>
-    <color name="pink">#F603EA</color>
+    <!-- Ejercicio2 -->
+    <color name="pantalla">#8BC34A</color>
+    <color name="fondo">#74777E</color>
+    <color name="btn">#090908</color>
+    <color name="btnOperacion">#FF5722</color>
+    <color name="letraBtn">#FAF6FA</color>
 </resources>
