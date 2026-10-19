@@ -5,4 +5,6 @@
     <string name="textoSwitch">¿Recordar?</string>
     <string name="textoBoton">Continuar</string>
     <string name="textoMensaje"></string>
+    <string name="faltaCorreo">Escribe tu correo</string>
+    <string name="faltaContra">Escribe tu contraseña</string>
 </resources>

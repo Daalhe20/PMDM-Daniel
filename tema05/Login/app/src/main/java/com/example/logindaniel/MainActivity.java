@@ -37,8 +37,17 @@ public class MainActivity extends AppCompatActivity {
 
         btnContinuar.setOnClickListener(v -> {
             String correo = editTxtCorreo.getText().toString().trim();
-            String clave = editTxtContra.getText().toString();
-            if (correo.equals(CORREO_VALIDO) && clave.equals(CLAVE_VALIDA)) {
+            String contra = editTxtContra.getText().toString();
+
+            if (correo.isEmpty()) {
+                editTxtCorreo.setError(getString(R.string.faltaCorreo));
+                return;
+            } else if (contra.isEmpty()) {
+                editTxtContra.setError(getString(R.string.faltaContra));
+                return;
+            }
+
+            if (correo.equals(CORREO_VALIDO) && contra.equals(CLAVE_VALIDA)) {
                 if (switchRecordar.isChecked()) {
                     txtMensaje.setText("Usuario y contraseña correctos.     " +
                             "       Almacenados para siguientes accesos");
