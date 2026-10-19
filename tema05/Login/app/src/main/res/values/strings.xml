@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">LoginDaniel</string>
+    <string name="textoCorreo">Correo</string>
+    <string name="textoContra">Contraseña</string>
+    <string name="textoSwitch">¿Recordar?</string>
+    <string name="textoBoton">Continuar</string>
+</resources>

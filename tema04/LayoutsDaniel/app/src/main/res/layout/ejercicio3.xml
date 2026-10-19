@@ -24,7 +24,7 @@
     <Button
         android:id="@+id/b7"
         style="@style/btnCalculator"
-        android:text="7"
+        android:text="@string/_7"
         android:insetTop="0dp"
         android:insetBottom="0dp"
         android:layout_width="0dp"
@@ -39,14 +39,13 @@
 
     <Button
         android:id="@+id/b8"
-        android:text="8"
+        android:text="@string/_8"
         style="@style/btnCalculator"
         android:insetTop="0dp"
         android:insetBottom="0dp"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintDimensionRatio="1:1"
-        app:layout_constraintBottom_toBottomOf="@id/b7"
         app:layout_constraintStart_toEndOf="@id/b7"
         app:layout_constraintEnd_toStartOf="@id/b9"
         app:layout_constraintTop_toTopOf="@id/b7"
