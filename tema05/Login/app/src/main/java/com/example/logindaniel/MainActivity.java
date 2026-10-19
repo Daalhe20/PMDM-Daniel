@@ -39,8 +39,14 @@ public class MainActivity extends AppCompatActivity {
             String correo = editTxtCorreo.getText().toString().trim();
             String clave = editTxtContra.getText().toString();
             if (correo.equals(CORREO_VALIDO) && clave.equals(CLAVE_VALIDA)) {
-                txtMensaje.setText("Usuario y contraseña correctos");
-                txtMensaje.setTextColor(ContextCompat.getColor(this, R.color.green));
+                if (switchRecordar.isChecked()) {
+                    txtMensaje.setText("Usuario y contraseña correctos.     " +
+                            "       Almacenados para siguientes accesos");
+                    txtMensaje.setTextColor(ContextCompat.getColor(this, R.color.green));
+                } else {
+                    txtMensaje.setText("Usuario y contraseña correctos");
+                    txtMensaje.setTextColor(ContextCompat.getColor(this, R.color.green));
+                }
             } else {
                 txtMensaje.setText("Usuario y/o contraseña incorrectos");
                 txtMensaje.setTextColor(ContextCompat.getColor(this, R.color.red));
