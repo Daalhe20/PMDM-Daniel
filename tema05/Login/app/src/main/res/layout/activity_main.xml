@@ -93,8 +93,8 @@
         android:layout_height="48dp"
         android:layout_marginTop="24dp"
         android:text="@string/textoMensaje"
+        android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.725"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnContinuar" />
 

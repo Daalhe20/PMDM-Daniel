@@ -12,10 +12,12 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import com.google.android.material.materialswitch.MaterialSwitch;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     private static final String CORREO_VALIDO = "dani@correo.com";
     private static final String CLAVE_VALIDA = "1234";
+    private int intentos = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
             }
 
             if (correo.equals(CORREO_VALIDO) && contra.equals(CLAVE_VALIDA)) {
+                intentos = 0;
                 if (switchRecordar.isChecked()) {
                     txtMensaje.setText("Usuario y contraseña correctos.     " +
                             "       Almacenados para siguientes accesos");
@@ -59,6 +62,12 @@ public class MainActivity extends AppCompatActivity {
             } else {
                 txtMensaje.setText("Usuario y/o contraseña incorrectos");
                 txtMensaje.setTextColor(ContextCompat.getColor(this, R.color.red));
+                intentos ++;
+                if (intentos >= 3) {
+                    btnContinuar.setEnabled(false);
+                    txtMensaje.setText("Demasiados intentos");
+                    Toast.makeText(this, R.string.botonBloqueado, Toast.LENGTH_SHORT).show();
+                }
             }
         });
     }

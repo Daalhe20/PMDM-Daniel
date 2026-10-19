@@ -7,4 +7,5 @@
     <string name="textoMensaje"></string>
     <string name="faltaCorreo">Escribe tu correo</string>
     <string name="faltaContra">Escribe tu contraseña</string>
+    <string name="botonBloqueado">Botón bloqueado por acumulación de intentos fallidos</string>
 </resources>
