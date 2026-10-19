@@ -37,7 +37,7 @@
     <EditText
         android:id="@+id/editTxtCorreo"
         android:layout_width="330dp"
-        android:layout_height="37dp"
+        android:layout_height="59dp"
         android:layout_marginTop="24dp"
         android:background="@color/orange"
         android:ems="10"
@@ -51,8 +51,8 @@
 
     <EditText
         android:id="@+id/editTxtContra"
-        android:layout_width="328dp"
-        android:layout_height="37dp"
+        android:layout_width="330dp"
+        android:layout_height="60dp"
         android:layout_marginTop="20dp"
         android:background="@color/orange"
         android:ems="10"
@@ -86,5 +86,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/switch1" />
+
+    <TextView
+        android:id="@+id/txtMensaje"
+        android:layout_width="269dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/textoMensaje"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.725"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnContinuar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

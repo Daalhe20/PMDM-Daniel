@@ -4,4 +4,5 @@
     <string name="textoContra">Contraseña</string>
     <string name="textoSwitch">¿Recordar?</string>
     <string name="textoBoton">Continuar</string>
+    <string name="textoMensaje"></string>
 </resources>
