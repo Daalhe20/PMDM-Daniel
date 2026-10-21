@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">ListaDaniel</string>
     <string name="imagen_elemento">Imagen del elemento</string>
+    <string name="cabecera">Mis juegos Pokemon</string>
 </resources>
