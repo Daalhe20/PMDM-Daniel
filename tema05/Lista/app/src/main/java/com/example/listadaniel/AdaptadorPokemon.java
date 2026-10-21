@@ -31,6 +31,10 @@ public class AdaptadorPokemon
         holder.tvTitulo.setText(pokemon.getTitulo());
         holder.tvSubtitulo.setText(pokemon.getAnio());
         holder.ivImagen.setImageResource(pokemon.getImagen());
+        holder.itemView.setOnClickListener(v ->
+                Toast.makeText(v.getContext(),
+                        pokemon.getTitulo(),
+                        Toast.LENGTH_SHORT).show());
     }
     @Override
     public int getItemCount() {
