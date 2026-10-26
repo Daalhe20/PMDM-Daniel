@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">LoginDaniel</string>
+    <string name="textoCorreo">Correo</string>
+    <string name="textoContra">Contraseña</string>
+    <string name="textoSwitch">¿Recordar?</string>
+    <string name="textoBoton">Continuar</string>
+    <string name="textoMensaje"></string>
+    <string name="faltaCorreo">Escribe tu correo</string>
+    <string name="faltaContra">Escribe tu contraseña</string>
+    <string name="botonBloqueado">Botón bloqueado por acumulación de intentos fallidos</string>
+    <string name="toolBar">Menú Principal</string>
+    <string name="textoPrincipal">Hola, daniel@correo.com</string>
+    <string name="txtButtonOut">Cerrar Sesión</string>
+</resources>
