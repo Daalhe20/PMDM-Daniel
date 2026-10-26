@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+  <androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.logindaniel.MainActivity2">
+
+  <com.google.android.material.appbar.MaterialToolbar
+      android:id="@+id/menuToolBar"
+      android:layout_width="0dp"
+      android:layout_height="65dp"
+      android:background="@color/orange"
+      android:minHeight="?attr/actionBarSize"
+      android:text="@string/toolBar"
+      android:textColor="@color/blue"
+      android:theme="?attr/actionBarTheme"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  <TextView
+      android:id="@+id/txtPrincipal"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="124dp"
+      android:text="@string/textoPrincipal"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/menuToolBar" />
+
+  <Button
+      android:id="@+id/btnOut"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="388dp"
+      android:text="@string/txtButtonOut"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.884"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/txtPrincipal" />
+</androidx.constraintlayout.widget.ConstraintLayout>
