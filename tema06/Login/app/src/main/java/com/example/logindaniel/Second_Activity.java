@@ -1,6 +1,8 @@
 package com.example.logindaniel;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,9 +12,11 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.google.android.material.appbar.MaterialToolbar;
 
+
 public class Second_Activity extends AppCompatActivity {
 
     public static final String EXTRA_CORREO = "correo";
+    Button cerrarSesion;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,8 +30,16 @@ public class Second_Activity extends AppCompatActivity {
         });
 
         MaterialToolbar toolbar = findViewById(R.id.menuToolBar);
+        cerrarSesion = findViewById(R.id.btnMenuOut);
+
         setSupportActionBar(toolbar);
         String correo = getIntent().getStringExtra(EXTRA_CORREO);
+        cerrarSesion.setOnClickListener(v -> {
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
+            finish();
+        });
+
 
     }
 
