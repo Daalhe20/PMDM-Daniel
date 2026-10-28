@@ -1,5 +1,6 @@
 package com.example.logindaniel;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
@@ -39,6 +40,14 @@ public class MainActivity extends AppCompatActivity {
         Button btnContinuar = findViewById(R.id.btnContinuar);
         TextView txtMensaje = findViewById(R.id.txtMensaje);
 
+        SharedPreferences prefs = getSharedPreferences("datos_app", MODE_PRIVATE);
+        String correoGuardado = prefs.getString("usuario", "");
+
+        if (!correoGuardado.isEmpty()) {
+            editTxtCorreo.setText(correoGuardado);
+            switchRecordar.setChecked(true);
+        }
+
         btnContinuar.setOnClickListener(v -> {
             String correo = editTxtCorreo.getText().toString().trim();
             String contra = editTxtContra.getText().toString();
@@ -53,6 +62,12 @@ public class MainActivity extends AppCompatActivity {
 
             if (correo.equals(CORREO_VALIDO) && contra.equals(CLAVE_VALIDA)) {
                 intentos = 0;
+
+                if (switchRecordar.isChecked()){
+                    prefs.edit().putString("usuario", correo).apply();
+                } else {
+                    prefs.edit().remove("usuario").apply();
+                }
 
                 Intent intent = new Intent(this, Second_Activity.class);
                 intent.putExtra(Second_Activity.EXTRA_CORREO, correo);
