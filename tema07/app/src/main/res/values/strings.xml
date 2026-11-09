@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">ReproductorDaniel</string>
+    <string name="titulo">Reproductor Daniel</string>
+    <string name="cancion">Eminem · Till I Collapse</string>
+    <string name="txtBtnPlay">Play</string>
+    <string name="txtBtnPausa">Pausa</string>
+    <string name="minActual">00:00</string>
+    <string name="minTotal">00:00</string>
+</resources>
