@@ -113,21 +113,30 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-//        //funcion para reiniciar cancion cuando finaliza
-//        player.addListener(new Player.Listener() {
-//            @Override
-//            public void onPlaybackStateChanged(int estado) {
-//                if (estado == Player.STATE_ENDED) {
-//                    //mueve la barra al principio
-//                    player.seekTo(0);
-//                    //pause para que no se reinicie reproduciendo
-//                    player.pause();
-//                }
-//            }
-//        });
-
         //arrancamos el handler
+        //handler.post(actualizar);
+    }
+
+    //en onStop, la música se pausa y la barra deja de actualizarse
+    @Override
+    protected void onStop() {
+        super.onStop();
+        player.pause();
+        handler.removeCallbacks(actualizar);
+    }
+
+    //en onStart, la barra vuelve a actualizarse
+    @Override
+    protected void onStart() {
+        super.onStart();
         handler.post(actualizar);
+    }
+
+    //en onDestroy, el reproductor se libera con release()
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        player.release();
     }
 
     //creamos el metodo formatear
