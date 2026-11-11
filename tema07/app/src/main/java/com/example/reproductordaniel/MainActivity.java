@@ -1,5 +1,7 @@
 package com.example.reproductordaniel;
 
+import android.media.AudioAttributes;
+import android.media.SoundPool;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
@@ -26,6 +28,8 @@ public class MainActivity extends AppCompatActivity {
     private TextView minutoActual;
     private TextView duracionTotal;
     private boolean arrastrando = false;
+    private SoundPool soundPool;
+
 
 
     //creamos el handler para que la barra avance sola
@@ -115,6 +119,42 @@ public class MainActivity extends AppCompatActivity {
 
         //arrancamos el handler
         //handler.post(actualizar);
+
+        AudioAttributes atributos = new AudioAttributes.Builder().setUsage(AudioAttributes.USAGE_GAME).setContentType(AudioAttributes.CONTENT_TYPE_SONIFICATION).build();
+
+        soundPool = new SoundPool.Builder().setMaxStreams(4).setAudioAttributes(atributos).build();
+
+        int idLaser = soundPool.load(this, R.raw.laser, 1);
+        int idPitido = soundPool.load(this, R.raw.pitido, 1);
+        int idAplausos = soundPool.load(this, R.raw.aplausos, 1);
+        int idRedoble = soundPool.load(this, R.raw.drumroll, 1);
+
+        //linkamos/asignamos las variables de los botones de sonido
+        Button btnLaser = findViewById(R.id.btnLaser);
+        Button btnPitido = findViewById(R.id.btnPitido);
+        Button btnAplausos = findViewById(R.id.btnAplausos);
+        Button btnRedoble = findViewById(R.id.btnDrum);
+
+        //creamos el listener para los botones
+        soundPool.setOnLoadCompleteListener((pool, idSonido, estado) -> {
+            if (estado == 0) {
+                if (idSonido == idLaser) {
+                    btnLaser.setEnabled(true);
+                } else if (idSonido == idPitido) {
+                    btnPitido.setEnabled(true);
+                } else if (idSonido == idAplausos) {
+                    btnAplausos.setEnabled(true);
+                } else if (idSonido == idRedoble) {
+                    btnRedoble.setEnabled(true);
+                }
+            }
+        });
+
+        //asignamos el sonido a cada boton con play()
+        btnLaser.setOnClickListener(v -> soundPool.play(idLaser, 1f, 1f, 1, 0, 1f));
+        btnPitido.setOnClickListener(v -> soundPool.play(idPitido, 1f, 1f, 1, 0, 1f));
+        btnAplausos.setOnClickListener(v -> soundPool.play(idAplausos, 1f, 1f, 1, 0, 1f));
+        btnRedoble.setOnClickListener(v -> soundPool.play(idRedoble, 1f, 1f, 1, 0, 1f));
     }
 
     //en onStop, la música se pausa y la barra deja de actualizarse
@@ -137,6 +177,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
         player.release();
+        soundPool.release();
     }
 
     //creamos el metodo formatear

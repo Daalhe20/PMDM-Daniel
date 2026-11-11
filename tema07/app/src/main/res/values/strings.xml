@@ -6,4 +6,9 @@
     <string name="txtBtnPausa">Pausa</string>
     <string name="minActual">00:00</string>
     <string name="minTotal">00:00</string>
+    <string name="txtBtnAplausos">Aplausos</string>
+    <string name="txtBtnPitido">Pitido</string>
+    <string name="txtBtnLaser">Laser</string>
+    <string name="txtBtnRedoble">Redoble</string>
+    <string name="titSonidos">Efectos de sonido</string>
 </resources>
