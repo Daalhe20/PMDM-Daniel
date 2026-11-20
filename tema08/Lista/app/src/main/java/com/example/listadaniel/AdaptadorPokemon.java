@@ -8,6 +8,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.example.listadaniel.Pokemon;
 
 import java.util.ArrayList;
@@ -30,7 +31,7 @@ public class AdaptadorPokemon
         Pokemon pokemon = pokemons.get(position);
         holder.tvTitulo.setText(pokemon.getTitulo());
         holder.tvSubtitulo.setText(pokemon.getAnio());
-        holder.ivImagen.setImageResource(pokemon.getImagen());
+        Glide.with(holder.itemView).load(pokemon.getImagen()).into(holder.ivImagen);
         holder.itemView.setOnClickListener(v ->
                 Toast.makeText(v.getContext(),
                         pokemon.getTitulo(),
