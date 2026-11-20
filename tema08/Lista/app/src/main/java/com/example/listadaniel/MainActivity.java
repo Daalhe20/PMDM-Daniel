@@ -1,6 +1,8 @@
 package com.example.listadaniel;
 
 import android.os.Bundle;
+import android.util.Log;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,9 +13,19 @@ import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
+    private static final String TAG = "MainActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,16 +38,20 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-        // 1. Los datos: al menos 8 elementos
         ArrayList<Pokemon> pokemons = new ArrayList<>();
-        pokemons.add(new Pokemon("Rojo Fuego", "2004", R.drawable.rojo_fuego));
-        pokemons.add(new Pokemon("Leyendas Arceus", "2022", R.drawable.arceus));
-        pokemons.add(new Pokemon("Blanco 2, Negro 2", "2012", R.drawable.blanco_negro_2));
-        pokemons.add(new Pokemon("Platino", "2008", R.drawable.platino));
-        pokemons.add(new Pokemon("Cristal", "2000", R.drawable.cristal));
-        pokemons.add(new Pokemon("Esmeralda", "2004", R.drawable.esmeralda));
-        pokemons.add(new Pokemon("Oro, Plata", "1999", R.drawable.oro_plata));
-        pokemons.add(new Pokemon("Rubi, Zafiro", "2002", R.drawable.rubi_zafiro));
+        try {
+            JSONArray array = new JSONArray(leerRaw(R.raw.datos));
+            for (int i = 0; i < array.length(); i++) {
+                JSONObject objeto = array.getJSONObject(i);
+                pokemons.add(new Pokemon(
+                        objeto.getString("titulo"),
+                        objeto.getString("anio"),
+                        objeto.getString("imagen")));
+            }
+        } catch (IOException | JSONException e) {
+            Log.e(TAG, "Error al leer datos.json", e);
+            Toast.makeText(this, R.string.error_json, Toast.LENGTH_LONG).show();
+        }
 
         // 2. La lista: cómo se colocan las filas y quién las pinta
         RecyclerView rvLista = findViewById(R.id.rvLista);
@@ -43,4 +59,18 @@ public class MainActivity extends AppCompatActivity {
         rvLista.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
         rvLista.setAdapter(new AdaptadorPokemon(pokemons));
     }
+
+    private String leerRaw(int idRecurso) throws IOException {
+        try (InputStream entrada = getResources().openRawResource(idRecurso);
+             BufferedReader lector = new BufferedReader(
+                     new InputStreamReader(entrada, StandardCharsets.UTF_8))) {
+            StringBuilder texto = new StringBuilder();
+            String linea;
+            while ((linea = lector.readLine()) != null) {
+                texto.append(linea).append('\n');
+            }
+            return texto.toString();
+        }
+    }
+
 }
