@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "titulo": "Rojo Fuego",
+    "anio": "2004",
+    "imagen": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/a/ac/latest/20211108122617/Car%C3%A1tula_de_Rojo_Fuego.png/315px-Car%C3%A1tula_de_Rojo_Fuego.png"
+  },
+  {
+    "id": 2,
+    "titulo": "Leyendas Arceus",
+    "anio": "2022",
+    "imagen": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/d/d7/latest/20210526132431/Car%C3%A1tula_Leyendas_Pok%C3%A9mon_Arceus.png/390px-Car%C3%A1tula_Leyendas_Pok%C3%A9mon_Arceus.png"
+  },
+  {
+    "id": 3,
+    "titulo": "Blanco 2, Negro 2",
+    "anio": "2012",
+    "imagen": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/4/44/latest/20140513223804/Pok%C3%A9mon_Black_2_%26_Pok%C3%A9mon_White_2_-_Super_Music_Collection.png/330px-Pok%C3%A9mon_Black_2_%26_Pok%C3%A9mon_White_2_-_Super_Music_Collection.png"
+  },
+  {
+    "id": 4,
+    "titulo": "Platino",
+    "anio": "2008",
+    "imagen": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/f/f4/latest/20211108120853/Car%C3%A1tula_Pok%C3%A9mon_Platino_%28ESP%29.png/375px-Car%C3%A1tula_Pok%C3%A9mon_Platino_%28ESP%29.png"
+  },
+  {
+    "id": 5,
+    "titulo": "Cristal",
+    "anio": "2000",
+    "imagen": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/3/3b/latest/20160715093139/Pokemon_Edici%C3%B3n_Cristal.jpg/375px-Pokemon_Edici%C3%B3n_Cristal.jpg"
+  },
+  {
+    "id": 6,
+    "titulo": "Esmeralda",
+    "anio": "2004",
+    "imagen": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/0/02/latest/20211108123052/Caratula_Esmeralda.jpg/375px-Caratula_Esmeralda.jpg"
+  },
+  {
+    "id": 7,
+    "titulo": "Oro, Plata",
+    "anio": "1999",
+    "imagen": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/a/a3/latest/20141222215832/Pok%C3%A9mon_HeartGold_%26_Pok%C3%A9mon_SoulSilver_-_Super_Music_Collection.png/270px-Pok%C3%A9mon_HeartGold_%26_Pok%C3%A9mon_SoulSilver_-_Super_Music_Collection.png"
+  },
+  {
+    "id": 8,
+    "titulo": "Rubi, Zafiro",
+    "anio": "2002",
+    "imagen": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/d/d4/latest/20140410002735/Pok%C3%A9mon_Ruby_%26_Pok%C3%A9mon_Sapphire_-_Super_Music_Collection.png/270px-Pok%C3%A9mon_Ruby_%26_Pok%C3%A9mon_Sapphire_-_Super_Music_Collection.png"
+  }
+]
